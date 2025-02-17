@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <h1>QR Generado</h1>
+    <h1>QR</h1>
     <div class="qr-container">
         <img src="data:image/png;base64, {!! base64_encode(file_get_contents(public_path('qr_images/qr_temp.png'))) !!} " alt="QR Code" />
     </div>
