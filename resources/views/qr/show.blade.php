@@ -20,7 +20,6 @@
     @tailwind components;
     @tailwind utilities;
 
-    /* Estilos personalizados para móviles */
     .qr-body {
         min-height: 100vh;
         display: flex;
