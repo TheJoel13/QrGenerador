@@ -25,7 +25,6 @@ class QrController extends Controller
 
     public function descargaPdf(url $request)
     {
-        // Generar QR como PNG y convertirlo a base64
         $qrPng = QrCode::format('png')
             ->size(300)
             ->margin(1)
