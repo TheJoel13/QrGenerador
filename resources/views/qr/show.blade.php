@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Incluye tu archivo CSS responsive -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>QR Generated</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7412523202147499"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+    <title>Free QR Code Generator Online | Create Custom QR Codes Fast</title>
+    <meta name="description"
+        content="Create custom QR codes for any link, text, or file. Our tool is 100% free and easy to use, with no registration required.">
 </head>
 
 <body class="qr-body" data-bs-theme="light">
