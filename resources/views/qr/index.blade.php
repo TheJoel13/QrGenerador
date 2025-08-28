@@ -11,21 +11,21 @@
 
 <body class="bg-dark text-white">
     <div class="container my-5">
-        <h1 class="text-center">Generador de Código QR</h1>
+        <h1 class="text-center">Qr Generator for Free</h1>
         <form action="{{ route('qr.show') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="link" class="form-label">Introduce la página para generar el QR</label>
+                <label for="link" class="form-label">Insert the link to create the QR code</label>
                 <input type="text" class="form-control" id="link" name="link"
-                    placeholder="https://link de la pagina xd.com" required>
+                    placeholder="https://examplelink.com" required>
                 @error('link')
                     <div class="alert alert-danger mt-2">{{ $message }}</div>
                 @enderror
             </div>
             <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary">Generar QR</button>
+                <button type="submit" class="btn btn-primary">Generate QR</button>
             </div>
-            <p class="d-flex justify-content-center mt-3">By Joel</p>
+            <p class="d-flex justify-content-center mt-3">By The13k</p>
         </form>
     </div>
 </body>

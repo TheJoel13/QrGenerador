@@ -1,40 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QR Generado</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <title>QR Generated</title>
 </head>
 
-<body class="bg-dark text-white">
-    <div class="container my-5">
-        <h1 class="text-center">QR Generado</h1>
-        <div class="d-flex justify-content-center">
+<body class="qr-body" data-bs-theme="light">
+
+    <div class="container text-center mt-5">
+        <h2 class="mb-4">Here's your Qr Code!</h>
+
+        <div class="qr-container">
             {!! $qr !!}
         </div>
 
-        <div class="d-flex justify-content-center mt-4">
-            <form action="{{ route('qr.descargaPdf') }}" method="POST">
+        <div class="mt-4">
+            <form action="{{ route('qr.descargaPng') }}" method="POST" class="d-inline">
                 @csrf
-                <input type="hidden" name="link" value="{{ request()->input('link') }}">
-                <button type="submit" class="btn btn-primary">Descargar PDF</button>
+                <input type="hidden" name="link" value="{{ request('link') }}">
+                <button type="submit" class="btn btn-primary">Download as PNG</button>
+            </form>
+
+            <form action="{{ route('qr.descargaPdf') }}" method="POST" class="d-inline">
+                @csrf
+                <input type="hidden" name="link" value="{{ request('link') }}">
+                <button type="submit" class="btn btn-danger">Download as PDF</button>
+            </form>
+
+            <form action="{{ route('qr.index') }}" method="GET" class="d-inline">
+                @csrf
+                <input type="hidden" value="{{ request('index') }}">
+                <button type="submit" class="btn btn-secondary">Generate Another QR</button>
             </form>
         </div>
 
-        <div class="d-flex justify-content-center mt-2">
-            <form action="{{ route('qr.descargaPng') }}" method="POST">
-                @csrf
-                <input type="hidden" name="link" value="{{ request()->input('link') }}">
-                <button type="submit" class="btn btn-primary">Descargar PNG</button>
-            </form>
-        </div>
-
-        <div class="d-flex justify-content-center mt-2">
-            <a href="{{ route('qr.index') }}" class="btn btn-secondary">Generar otro QR</a>
-        </div>
-    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

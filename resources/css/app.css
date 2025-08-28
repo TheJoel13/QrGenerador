@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.qr-body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.qr-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
