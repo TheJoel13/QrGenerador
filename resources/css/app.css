@@ -47,7 +47,6 @@
     font-weight: 600;
 }
 
-/* Efectos para botones en dispositivos táctiles */
 .btn:hover {
     transform: translateY(-2px);
     transition: all 0.2s ease;
