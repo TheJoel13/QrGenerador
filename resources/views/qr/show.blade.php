@@ -11,6 +11,8 @@
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>QR Generated</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7412523202147499"
+    crossorigin="anonymous"></script>
 </head>
 
 <body class="qr-body" data-bs-theme="light">
